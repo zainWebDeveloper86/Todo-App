@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./Todo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Todo App</title>
+  </head>
+
+  <body>
+    <div
+      class="text-center pt-14 min-h-screen bg-black text-white flex flex-col gap-10"
+    >
+      <div class="todo-title">
+        <h1 class="font-serif text-2xl md:text-3xl lg:text-6xl text-center font-extrabold tracking-wide mb-2 md:mb-0"> ✨ Todo List ✍️ </h1>
+      </div>
+      <div id="time-date">
+        <h3 class="text-xl md:text-2xl lg:text-3xl"></h3>
+      </div>
+      <form id="formTodo" class="form-controller flex justify-center">
+        <input
+          id="todoText"
+          type="text"
+          class="outline-none rounded-bl-full focus:bg-gray-700 rounded-tl-full px-5 py-2 w-[60%] md:w-[45%] lg:w-[35%] bg-gray-800 text-white border border-transparent transition-all duration-500"
+          placeholder="Enter todo"
+        />
+        <button
+          id="addTodoButton"
+          type="submit"
+          class="bg-blue-700 rounded-br-full rounded-tr-full  flex justify-center items-center hover:bg-blue-500 py-3 px-4 md:px-6 cursor-pointer active:bg-yellow-600"
+        ><span class="material-symbols-outlined">add_task</span></button>
+      </form>
+      <div id="allTodosApp">
+        <ul
+          id="allTodos"
+          class="text-left flex justify-center flex-col items-center gap-4"
+        >
+        </ul>
+      </div>
+      <div class="delAllTodos flex justify-center">
+        <button
+          id="clearAllTodos"
+          type="submit"
+          class="p-2 rounded-lg bg-red-500 hover:bg-red-800 w-max cursor-pointer transition-all duration-400"
+        >
+          Clear All
+        </button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
